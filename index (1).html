@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velostrap + Fallen Fast Flags</title>
+<style>
+:root{--bg:#0d0f14;--card:#161a23;--line:#262c3a;--text:#e8ebf2;--mute:#8b93a7;--acc:#ff5a36;--acc2:#ffb020}
+:root[data-theme="light"]{--bg:#f4f5f8;--card:#fff;--line:#dde1ea;--text:#171a22;--mute:#5d6578}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f5f8;--card:#fff;--line:#dde1ea;--text:#171a22;--mute:#5d6578}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(900px 400px at 50% -100px,rgba(255,90,54,.18),transparent),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;justify-content:center;padding:48px 16px}
+main{width:100%;max-width:640px}
+h1{margin:0 0 6px;font-size:clamp(28px,6vw,40px);letter-spacing:-.02em}
+h1 span{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mute);margin:0 0 28px}
+.folder{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.head{width:100%;display:flex;align-items:center;gap:12px;padding:18px 20px;background:none;border:0;color:inherit;font:inherit;cursor:pointer;text-align:left}
+.head:hover{background:rgba(255,255,255,.03)}
+.ico{font-size:26px}
+.name{font-weight:600;font-size:18px}
+.cnt{color:var(--mute);font-size:13px}
+.arrow{margin-left:auto;transition:transform .2s;color:var(--mute)}
+.folder.open .arrow{transform:rotate(90deg)}
+.list{display:none;border-top:1px solid var(--line)}
+.folder.open .list{display:block}
+.file{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.file:last-child{border-bottom:0}
+.fi{font-size:24px}
+.fn{font-weight:600}
+.fd{color:var(--mute);font-size:13px;margin-top:2px}
+.btn{margin-left:auto;white-space:nowrap;text-decoration:none;color:#fff;background:linear-gradient(90deg,var(--acc),var(--acc2));padding:9px 16px;border-radius:10px;font-weight:600;font-size:14px}
+.btn:hover{filter:brightness(1.1)}
+.note{margin-top:20px;padding:14px 16px;border:1px dashed var(--line);border-radius:12px;color:var(--mute);font-size:13px;line-height:1.5}
+.note b{color:var(--text)}
+footer{margin-top:28px;text-align:center;color:var(--mute);font-size:12px}
+@media(max-width:480px){.file{flex-wrap:wrap}.btn{margin-left:38px}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Velo<span>strap</span> + Fallen Flags</h1>
+  <p class="sub">Скачай файлы из папки и установи.</p>
+
+  <section class="folder open" id="folder">
+    <button class="head" onclick="document.getElementById('folder').classList.toggle('open')">
+      <span class="ico">📁</span>
+      <span><div class="name">Velostrap_Fallen_Pack</div><div class="cnt">3 файла</div></span>
+      <span class="arrow">▶</span>
+    </button>
+    <div class="list">
+      <div class="file">
+        <span class="fi">⚡</span>
+        <div><div class="fn">Velostrap.exe</div><div class="fd">Основная программа · 13.3 МБ</div></div>
+        <a class="btn" href="Velostrap.exe" download>Скачать</a>
+      </div>
+      <div class="file">
+        <span class="fi">🚩</span>
+        <div><div class="fn">FastFlags_Fallen.json</div><div class="fd">Fast Flags Fallen · 114 флагов · 4.9 КБ</div></div>
+        <a class="btn" href="FastFlags_Fallen.json" download>Скачать</a>
+      </div>
+      <div class="file">
+        <span class="fi">📄</span>
+        <div><div class="fn">Инструкция.txt</div><div class="fd">Быстрая установка, шаг за шагом</div></div>
+        <a class="btn" href="Инструкция.txt" download>Скачать</a>
+      </div>
+    </div>
+  </section>
+  <div class="note">SHA-256: <b style="word-break:break-all;font-weight:500">6fd8ae68be5e103a957250c32eae71d6a5f6495ac85ffe7d5a278d1474fe154e</b><br>SHA-256 Velostrap.exe. Сверь хеш после скачивания, чтобы убедиться, что файл не изменён.</div>
+
+  <div class="note"><b>Важно:</b> использование на свой риск. Перед установкой прочитай инструкцию целиком.</div>
+  <footer>© Velostrap Pack</footer>
+</main>
+</body>
+</html>
